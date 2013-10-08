@@ -2,6 +2,7 @@
 /build/
 /include/
 /lib/
+/local/
 /man/
 /share/
 .Python
