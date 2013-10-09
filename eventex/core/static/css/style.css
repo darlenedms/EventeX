@@ -1,5 +1,92 @@
-h1 { color: Red; }
+*, html {
+    margin: 0 auto;
+    padding: 0 auto;
+}
 
-ul, ul li { display: inline-block; }
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
 
-li { margin: 0 15px;}
+header {
+    padding: 0 5%;
+    background-color: #1abc9c;
+    vertical-align: middle;
+}
+
+section {
+    padding: 2% 5%;
+    border-bottom: 2px solid #1abc9c;
+}
+
+h1 { 
+    color: #16a085;
+    font-size: 2em;
+    line-height: 3em;
+}
+
+h2 {
+    color: #1abc9c;
+    line-height: 2.5em;
+}
+
+ul {
+    margin-top: 50px;
+    float: right;
+}
+
+li { 
+    display: inline-block;
+    margin: 0 15px;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-shadow: -0.12em 0.15em 0 #2c3e50;
+}
+
+header a:hover {
+    border-bottom: 3px solid #2c3e50;
+}
+
+.inicio {
+    text-align: center;
+}
+
+.inicio p {
+    line-height: 1.5em;
+}
+
+.inicio button {
+    margin: 2% 0;
+    font-size: 1.3em;
+}
+
+.onde__mapa {
+    height: 500px;
+    background: url(../img/map.png) no-repeat center;
+    vertical-align: bottom;
+}
+
+.onde__mapa__texto {
+    position: absolute;
+    right: 8%;
+    margin-top: 300px;
+}
+
+.onde__mapa__texto p {
+    float: right;
+    clear: both;
+    margin: 5px;
+    padding: 0 10px;
+
+    /*border: 1px solid #4aa3df;*/
+    background-color: #2980b9;
+
+    /*border: 1px solid #2980b9;
+    background-color: #4aa3df;*/
+    color: #fff;
+    font-size: 1.5em;
+}
