@@ -9,8 +9,33 @@
         <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css">
     </head>
     <body>
-        <img src="{{ STATIC_URL }}img/logo.png">
-        <h1>Bem-vindo ao EventeX!</h1>
-        <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
+        <header>
+            <img src="{{ STATIC_URL }}img/logo.png">
+            <ul>
+                <li><a href="#onde">Onde</a></li>
+                <li><a href="#quando">Quando</a></li>
+                <li><a href="#programacao">Programação</a></li>
+            </ul>
+        </header>
+        <section>
+            <h1>Bem-vindo ao EventeX!</h1>
+            <p>Venha conhecer os palestrantes imaginários do EventeX, o melhor evento fake do Brasil!</p>
+            <p>Aprenda coisas que ainda não defini quais serão e concorra a prêmios.</p>
+            <button>inscreva-se</button>
+        </section>
+        <section class="onde">
+            <h2><a name="onde">Onde</a></h2>
+            <p>Em um endereço que esse mapa é incapaz de localizar pois simplesmente não existe</p>
+        </section>
+        <section class="quando">
+            <h2><a name="quando">Quando</a></h2>
+            <p>Dia: Hoje</p>
+            <p>Horário: Agora</p>
+            <p>Não perca tempo, você já está atrasado!</p>
+        </section>
+        <section>
+            <a name="programacao"><h2>Programação</h2></a>
+            <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
+        </section>
     </body>
 </html>

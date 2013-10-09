@@ -1,1 +1,5 @@
 h1 { color: Red; }
+
+ul, ul li { display: inline-block; }
+
+li { margin: 0 15px;}
