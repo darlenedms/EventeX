@@ -1,6 +1,7 @@
 *, html {
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -16,6 +17,7 @@ header {
 section {
     padding: 2% 5%;
     border-bottom: 2px solid #1abc9c;
+    clear: both;
 }
 
 h1 { 
@@ -51,6 +53,16 @@ header a:hover {
     border-bottom: 3px solid #2c3e50;
 }
 
+header a:active {
+    text-shadow: 0.1em -0.1em 0 #2c3e50;
+    border-bottom: none;
+}
+
+.destaque {
+    color: #1abc9c;
+    font-weight: bold;
+}
+
 .inicio {
     text-align: center;
 }
@@ -59,9 +71,23 @@ header a:hover {
     line-height: 1.5em;
 }
 
-.inicio button {
+.inicio__inscricao {
+    display: inline-block;
     margin: 2% 0;
+    padding: 1%;
+    border-radius: 0.5em;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
     font-size: 1.3em;
+    text-shadow: -0.05em 0.05em 0 #c0392b;
+    box-shadow: -0.12em 0.15em 0 #c0392b;
+}
+
+.inicio__inscricao:active {
+    margin-top: 2.2%;
+    text-shadow: 0.05em -0.05em 0 #c0392b;
+    box-shadow: 0.12em -0.15em 0 #c0392b;
 }
 
 .onde__mapa {
@@ -72,21 +98,31 @@ header a:hover {
 
 .onde__mapa__texto {
     position: absolute;
-    right: 8%;
+    left: 8%;
     margin-top: 300px;
 }
 
 .onde__mapa__texto p {
-    float: right;
+    float: left;
     clear: both;
     margin: 5px;
     padding: 0 10px;
-
-    /*border: 1px solid #4aa3df;*/
     background-color: #2980b9;
-
-    /*border: 1px solid #2980b9;
-    background-color: #4aa3df;*/
     color: #fff;
     font-size: 1.5em;
+}
+
+.inscricao form {
+    display: table-cell;
+}
+
+.inscricao p {
+    line-height: 20pt;
+    margin: 1% 0;
+    text-align: right; 
+}
+
+.inscricao input {
+    font-size: 12pt;
+    padding: 5px; 
 }
