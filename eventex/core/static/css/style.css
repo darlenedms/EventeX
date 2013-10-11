@@ -31,17 +31,6 @@ h2 {
     line-height: 2.5em;
 }
 
-ul {
-    margin-top: 50px;
-    float: right;
-}
-
-li { 
-    display: inline-block;
-    margin: 0 15px;
-    text-align: right;
-    font-size: 1.2em;
-}
 
 header a {
     color: white;
@@ -58,9 +47,40 @@ header a:active {
     border-bottom: none;
 }
 
+.button {
+    border-radius: 0.5em;
+    background-color: #e74c3c;
+    text-shadow: -0.05em 0.05em 0 #c0392b;
+    box-shadow: -0.12em 0.15em 0 #c0392b;
+    color: #fff;
+    text-decoration: none;
+}
+
 .destaque {
     color: #1abc9c;
     font-weight: bold;
+}
+
+.header_logo {
+    display: inline;
+    text-align: left;
+}
+
+.header_nav {
+    display: inline;
+    text-align: right;
+}
+
+.header_nav ul {
+    margin-top: 50px;
+    float: right;
+}
+
+.header_nav li { 
+    display: inline-block;
+    margin: 0 15px;
+    text-align: right;
+    font-size: 1.2em;
 }
 
 .inicio {
@@ -71,38 +91,32 @@ header a:active {
     line-height: 1.5em;
 }
 
-.inicio__inscricao {
+.inicio_inscricao {
     display: inline-block;
     margin: 2% 0;
     padding: 1%;
-    border-radius: 0.5em;
-    background-color: #e74c3c;
-    color: #fff;
-    text-decoration: none;
     font-size: 1.3em;
-    text-shadow: -0.05em 0.05em 0 #c0392b;
-    box-shadow: -0.12em 0.15em 0 #c0392b;
 }
 
-.inicio__inscricao:active {
+.inicio_inscricao:active {
     margin-top: 2.2%;
     text-shadow: 0.05em -0.05em 0 #c0392b;
     box-shadow: 0.12em -0.15em 0 #c0392b;
 }
 
-.onde__mapa {
+.onde_mapa {
     height: 500px;
     background: url(../img/map.png) no-repeat center;
     vertical-align: bottom;
 }
 
-.onde__mapa__texto {
+.onde_mapa_texto {
     position: absolute;
     left: 8%;
     margin-top: 300px;
 }
 
-.onde__mapa__texto p {
+.onde_mapa_texto p {
     float: left;
     clear: both;
     margin: 5px;
@@ -112,17 +126,32 @@ header a:active {
     font-size: 1.5em;
 }
 
+/* Inscrição */
+
 .inscricao form {
     display: table-cell;
 }
 
 .inscricao p {
     line-height: 20pt;
-    margin: 1% 0;
+    margin: 2% 0;
     text-align: right; 
 }
 
 .inscricao input {
-    font-size: 12pt;
+    font-size: 1.2em;
     padding: 5px; 
+}
+
+.errorlist li {
+    font-size: 10pt;
+    color: Red;
+    text-align: right;
+    list-style: none;
+}
+
+.inscricao .button {
+    border: none;
+    float: right;
+    font-size: 1em;
 }
