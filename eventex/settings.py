@@ -1,3 +1,4 @@
+# coding: utf-8
 from unipath import Path
 PROJECT_DIR = Path(__file__).parent
 
@@ -34,11 +35,11 @@ DATABASES = {
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 SITE_ID = 1
 
@@ -126,9 +127,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'south',
     'eventex.core',
     'eventex.subscriptions',
 )
@@ -161,3 +163,8 @@ LOGGING = {
         },
     }
 }
+
+# Usar o South para preparar o banco nos testes?
+# True: Sim. (default)
+# False: Não! Use o Syncdb
+SOUTH_TESTS_MIGRATE = False
