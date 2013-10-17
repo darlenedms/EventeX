@@ -10,6 +10,10 @@ class Speaker(models.Model):
     url = models.URLField(_('Url'))
     description = models.TextField(_(u'Descrição'), blank=True)
 
+    class Meta:
+        verbose_name = _('Palestrante')
+        verbose_name_plural = _('Palestrantes')
+
     def __unicode__(self):
         return self.name
 
