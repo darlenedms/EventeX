@@ -20,3 +20,11 @@ def talk_list(request):
         'afternoon_talks': Talk.objects.at_afternoon(),
     }
     return direct_to_template(request, 'core/talk_list.html', context)
+
+
+def talk_detail(request, pk):
+    talk = get_object_or_404(Talk, pk=pk)
+    context = {
+        'talk': talk,
+    }
+    return direct_to_template(request, 'core/talk_detail.html', context)
