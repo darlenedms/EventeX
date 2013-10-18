@@ -3,5 +3,10 @@
     <section class="palestrante">
         <h2><a href="{{ speaker.url }}" target="_blank">{{ speaker.name }}</a></h2>
         <p>{{ speaker.description }}</p>
+        {% for talk in talks %}
+            <h5>- <a href="/palestras/{{ talk.pk }}/">{{ talk.title }}</a></h5>
+        {% empty %}
+            <p>Keynote</p>
+        {% endfor %}
     </section>
 {% endblock content %}

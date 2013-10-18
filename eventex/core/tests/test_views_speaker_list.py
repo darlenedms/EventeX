@@ -1,7 +1,7 @@
 # coding: utf-8
 from django.test import TestCase
 from django.core.urlresolvers import reverse as r
-from eventex.core.models import Speaker, Talk
+from eventex.core.models import Speaker
 
 
 class SpeakerListTest(TestCase):
@@ -10,12 +10,6 @@ class SpeakerListTest(TestCase):
                                    slug='darlene-medeiros',
                                    url='http://darlenemedeiros.com.br',
                                    description='Passionate software developer!')
-
-        t = Talk.objects.create(description=u'Descrição da palestra',
-                                title='Título da palestra',
-                                start_time='10:00')
-
-        t.speakers.add(s)
 
         self.resp = self.client.get(r('core:speaker_list'))
 
@@ -32,5 +26,3 @@ class SpeakerListTest(TestCase):
         self.assertContains(self.resp, u'Darlene Medeiros', 1)
         self.assertContains(self.resp, u'/palestrantes/darlene-medeiros', 1)
         self.assertContains(self.resp, u'Passionate software developer!', 1)
-        # self.assertContains(self.resp, u'Título da palestra', 1)
-        # self.assertContains(self.resp, u'/palestras/1/')

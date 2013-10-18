@@ -15,7 +15,12 @@ def speaker_list(request):
 
 def speaker_detail(request, slug):
     speaker = get_object_or_404(Speaker, slug=slug)
-    context = {'speaker': speaker}
+    talks = Talk.objects.filter(speakers=speaker.pk)
+
+    context = {
+        'speaker': speaker,
+        'talks': talks
+    }
     return direct_to_template(request, 'core/speaker_detail.html', context)
 
 

@@ -1,15 +1,21 @@
 # coding: utf-8
 from django.test import TestCase
 from django.core.urlresolvers import reverse as r
-from eventex.core.models import Speaker
+from eventex.core.models import Speaker, Talk
 
 
 class SpeakerDetailTest(TestCase):
     def setUp(self):
-        Speaker.objects.create(name='Darlene Medeiros',
-                               slug='darlene-medeiros',
-                               url='http://darlenemedeiros.com.br',
-                               description='Passionate software developer!')
+        s = Speaker.objects.create(name='Darlene Medeiros',
+                                   slug='darlene-medeiros',
+                                   url='http://darlenemedeiros.com.br',
+                                   description='Passionate software developer!')
+
+        t = Talk.objects.create(description=u'Descrição da palestra',
+                                title='Título da palestra',
+                                start_time='10:00')
+
+        t.speakers.add(s)
 
         url = r('core:speaker_detail', kwargs={'slug': 'darlene-medeiros'})
         self.resp = self.client.get(url)
@@ -27,6 +33,8 @@ class SpeakerDetailTest(TestCase):
         self.assertContains(self.resp, 'Darlene Medeiros')
         self.assertContains(self.resp, 'Passionate software developer!')
         self.assertContains(self.resp, 'http://darlenemedeiros.com.br')
+        self.assertContains(self.resp, u'Título da palestra', 1)
+        self.assertContains(self.resp, u'/palestras/1/')
 
     def test_context(self):
         'Speaker must be in context.'
