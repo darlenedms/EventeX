@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="palestrantes">
+        <h2>Palestrantes</h2>
+        {% for speaker in speakers %}
+            <p class="destaque"><a href="/palestrantes/{{ speaker.slug }}">{{ speaker.name }}</a></p>
+            <p>{{ speaker.description }}</p>
+        {% empty %}
+            <p>Ainda não há palestrantes cadastrados.</p>
+        {% endfor %}
+    </section>
+{% endblock content %}
